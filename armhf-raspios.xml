@@ -1,0 +1,118 @@
+<ns0:RootFileSystem xmlns:ns0="https://www.linutronix.de/projects/Elbe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" created="2009-05-20T08:50:56" revision="6" xsi:schemaLocation="https://www.linutronix.de/projects/Elbe dbsfed.xsd">
+	<project>
+		<!-- human readable description of the project -->
+		<name>armhf-raspios</name>
+		<version>1.0</version>
+		<description>
+			raspios buster rootfs for raspberrypi3
+		</description>
+		<!-- buildtype is used to configure qemu-user and debian arch -->
+		<buildtype>armhf</buildtype>
+		<noauth />
+		<mirror>
+			<!-- primary mirror is used by debootstrap -->
+			<primary_host>raspbian.raspberrypi.org</primary_host>
+			<primary_path>raspbian</primary_path>
+			<primary_proto>http</primary_proto>
+			<url-list>
+				<url>
+					<binary>http://archive.raspberrypi.org/debian/ buster main</binary>
+					<source>http://archive.raspberrypi.org/debian/ buster main</source>
+					<key>http://archive.raspberrypi.org/debian/raspberrypi.gpg.key</key>
+				</url>
+				<url>
+					<binary>http://raspbian.raspberrypi.org/raspbian buster main contrib non-free rpi</binary>
+					<source>http://raspbian.raspberrypi.org/raspbian buster main contrib non-free rpi</source>
+					<key>https://archive.raspbian.org/raspbian.public.key</key>
+				</url>
+			</url-list>
+		</mirror>
+
+		<!-- debian testing? stable? unstable?? -->
+		<suite>buster</suite>
+	</project>
+	<target>
+		<!-- content for /etc/hostname -->
+		<hostname>raspios</hostname>
+		<!-- content for /etc/domainname -->
+		<domain>raspios-domain</domain>
+		<!-- root password -->
+		<passwd>root</passwd>
+		<!-- run a getty here: -->
+		<console>ttyS1,115200</console>
+		<!-- speed up build with debootstrap variant minbase.
+		Using minbase here and explicit install of systemd later
+		on speed up the installation process, since it reduces
+		the emulated part (run in QEMU) of the installation
+		significant.
+		-->
+		<package>
+			<!-- build a tarball of the target image -->
+			<tar>
+				<name>armhf-raspios.tgz</name>
+			</tar>
+		</package>
+		<!-- define an sdcard image -->
+		<images>
+			<msdoshd>
+				<!-- name of the image file -->
+				<name>armhf-raspios.img</name>
+				<size>1500MiB</size>
+					<!-- partition layout -->
+					<partition>
+						<size>50MiB</size>
+						<!-- label needs to match with the fstab entry below -->
+						<label>boot</label>
+						<bootable/>
+					</partition>
+					<partition>
+						<size>remain</size>
+						<label>rfs</label>
+					</partition>
+			</msdoshd>
+		</images>
+		<fstab>
+			<bylabel>
+				<!-- label needs to match with an image entry aboth -->
+				<label>rfs</label>
+				<mountpoint>/</mountpoint>
+				<fs>
+					<!-- fs type and options -->
+					<type>ext2</type>
+					<tune2fs>-i 0</tune2fs>
+				</fs>
+			</bylabel>
+			<bylabel>
+				<label>boot</label>
+				<mountpoint>/boot</mountpoint>
+				<fs>
+					<type>vfat</type>
+				</fs>
+			</bylabel>
+		</fstab>
+		<finetuning>
+			<!-- shrink target image -->
+			<rm>/var/cache/apt/archives/*.deb</rm>
+			<rm>/var/cache/apt/*.bin</rm>
+			<rm>/var/lib/apt/lists/ftp*</rm>
+		</finetuning>
+		<pkg-list>
+			<pkg>raspberrypi-kernel</pkg>
+			<pkg>raspberrypi-bootloader</pkg>
+			<pkg>openssh-server</pkg>
+			<pkg>less</pkg>
+			<pkg>bash</pkg>
+			<pkg>vim-tiny</pkg>
+			<pkg>wget</pkg>
+			<pkg>ntpdate</pkg>
+			<pkg>busybox</pkg>
+			<pkg>firmware-brcm80211</pkg>
+			<pkg>wpasupplicant</pkg>
+			<pkg>ssh</pkg>
+    			<pkg>parted</pkg>
+    			<pkg>dosfstools</pkg>
+    			<pkg>iw</pkg>
+    			<pkg>net-tools</pkg> 
+		</pkg-list>
+	</target>
+</ns0:RootFileSystem>
