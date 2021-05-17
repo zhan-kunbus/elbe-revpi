@@ -4,7 +4,7 @@
 		<name>armhf-revpi</name>
 		<version>1.0</version>
 		<description>
-			revpi buster rootfs for raspberrypi3
+			buster rootfs for revolutionpi devices
 		</description>
 		<!-- buildtype is used to configure qemu-user and debian arch -->
 		<buildtype>armhf</buildtype>
@@ -218,7 +218,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 		<!-- root password -->
 		<passwd>root</passwd>
 		<!-- run a getty here: -->
-		<console>ttyS1,115200</console>
+		<console>ttyS0,115200</console>
 		<!-- speed up build with debootstrap variant minbase.
 		Using minbase here and explicit install of systemd later
 		on speed up the installation process, since it reduces
@@ -236,7 +236,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<msdoshd>
 				<!-- name of the image file -->
 				<name>armhf-revpi.img</name>
-				<size>1500MiB</size>
+				<size>5000MiB</size>
 					<!-- partition layout -->
 					<partition>
 						<size>50MiB</size>
@@ -274,24 +274,291 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<rm>/var/cache/apt/archives/*.deb</rm>
 			<rm>/var/cache/apt/*.bin</rm>
 			<rm>/var/lib/apt/lists/ftp*</rm>
+			<command>apt update; apt install teamviewer-revpi</command>
 		</finetuning>
 		<pkg-list>
-			<pkg on_src_cd="False">raspberrypi-kernel</pkg>
-			<pkg>raspberrypi-bootloader</pkg>
-			<pkg>openssh-server</pkg>
-			<pkg>less</pkg>
+			<pkg>adduser</pkg>
+			<pkg>alacarte</pkg>
+			<pkg>alsa-utils</pkg>
+			<pkg>apt-listchanges</pkg>
+			<pkg>apt-transport-https</pkg>
+			<pkg>apt-utils</pkg>
+			<pkg>apt</pkg>
+			<pkg>arandr</pkg>
+			<pkg>avahi-daemon</pkg>
+			<pkg>base-files</pkg>
+			<pkg>base-passwd</pkg>
+			<pkg>bash-completion</pkg>
 			<pkg>bash</pkg>
-			<pkg>vim-tiny</pkg>
-			<pkg>wget</pkg>
-			<pkg>ntpdate</pkg>
-			<pkg>busybox</pkg>
-			<pkg>firmware-brcm80211</pkg>
-			<pkg>wpasupplicant</pkg>
-			<pkg>ssh</pkg>
-			<pkg>parted</pkg>
+			<pkg>bsdmainutils</pkg>
+			<pkg>bsdutils</pkg>
+			<pkg>build-essential</pkg>
+			<pkg>ca-certificates</pkg>
+			<pkg>can-utils</pkg>
+			<pkg>chrome-gnome-shell</pkg>
+			<pkg>chromium-browser</pkg>
+			<pkg>cifs-utils</pkg>
+			<pkg>console-setup</pkg>
+			<pkg>coreutils</pkg>
+			<pkg>cpio</pkg>
+			<pkg>cpufrequtils</pkg>
+			<pkg>crda</pkg>
+			<pkg>cron</pkg>
+			<pkg>cups</pkg>
+			<pkg>curl</pkg>
+			<pkg>dash</pkg>
+			<pkg>debconf-i18n</pkg>
+			<pkg>debconf-utils</pkg>
+			<pkg>debconf</pkg>
+			<pkg>debianutils</pkg>
+			<pkg>dhcpcd5</pkg>
+			<pkg>diffutils</pkg>
+			<pkg>dirmngr</pkg>
+			<pkg>dmidecode</pkg>
+			<pkg>dmsetup</pkg>
 			<pkg>dosfstools</pkg>
-			<pkg>iw</pkg>
+			<pkg>dphys-swapfile</pkg>
+			<pkg>dpkg</pkg>
+			<pkg>e2fsprogs</pkg>
+			<pkg>ed</pkg>
+			<pkg>ethtool</pkg>
+			<pkg>fbset</pkg>
+			<pkg>fdisk</pkg>
+			<pkg>ffmpeg</pkg>
+			<pkg>findutils</pkg>
+			<pkg>firmware-atheros</pkg>
+			<pkg>firmware-brcm80211</pkg>
+			<pkg>firmware-libertas</pkg>
+			<pkg>firmware-misc-nonfree</pkg>
+			<pkg>firmware-realtek</pkg>
+			<pkg>gcc-8-base</pkg>
+			<pkg>gdb</pkg>
+			<pkg>gdbm-l10n</pkg>
+			<pkg>gdbserver</pkg>
+			<pkg>geany</pkg>
+			<pkg>git</pkg>
+			<pkg>gldriver-test</pkg>
+			<pkg>gnome-icon-theme</pkg>
+			<pkg>gnupg-l10n</pkg>
+			<pkg>gnupg-utils</pkg>
+			<pkg>gnupg2</pkg>
+			<pkg>gnupg</pkg>
+			<pkg>gpg-agent</pkg>
+			<pkg>gpg-wks-client</pkg>
+			<pkg>gpg-wks-server</pkg>
+			<pkg>gpg</pkg>
+			<pkg>gpgconf</pkg>
+			<pkg>gpgsm</pkg>
+			<pkg>gpgv</pkg>
+			<pkg>grep</pkg>
+			<pkg>groff-base</pkg>
+			<pkg>gstreamer1.0-alsa</pkg>
+			<pkg>gstreamer1.0-libav</pkg>
+			<pkg>gstreamer1.0-omx</pkg>
+			<pkg>gstreamer1.0-plugins-bad</pkg>
+			<pkg>gstreamer1.0-plugins-base</pkg>
+			<pkg>gstreamer1.0-plugins-good</pkg>
+			<pkg>gstreamer1.0-x</pkg>
+			<pkg>gvfs-backends</pkg>
+			<pkg>gvfs-fuse</pkg>
+			<pkg>gvfs</pkg>
+			<pkg>gzip</pkg>
+			<pkg>hardlink</pkg>
+			<pkg>hostname</pkg>
+			<pkg>htop</pkg>
+			<pkg>ifupdown</pkg>
+			<pkg>info</pkg>
+			<pkg>init-system-helpers</pkg>
+			<pkg>init</pkg>
+			<pkg>install-info</pkg>
+			<pkg>iproute2</pkg>
+			<pkg>iptables</pkg>
+			<pkg>iputils-ping</pkg>
+			<pkg>isc-dhcp-client</pkg>
+			<pkg>isc-dhcp-common</pkg>
+			<pkg>keyboard-configuration</pkg>
+			<pkg>kmod</pkg>
+			<pkg>less</pkg>
+			<pkg>man-db</pkg>
+			<pkg>manpages-dev</pkg>
+			<pkg>mawk</pkg>
+			<pkg>menu-xdg</pkg>
+			<pkg>mount</pkg>
+			<pkg>mousepad</pkg>
+			<pkg>multiarch-support</pkg>
+			<pkg>nano</pkg>
+			<pkg>ncdu</pkg>
+			<pkg>ncurses-base</pkg>
+			<pkg>ncurses-bin</pkg>
 			<pkg>net-tools</pkg>
+			<pkg>netbase</pkg>
+			<pkg>netcat-openbsd</pkg>
+			<pkg>netcat-traditional</pkg>
+			<pkg>newpid</pkg>
+			<pkg>nfs-common</pkg>
+			<pkg>nodejs</pkg>
+			<pkg>noderedrevpinodes-server</pkg>
+			<pkg>ntfs-3g</pkg>
+			<pkg>obconf</pkg>
+			<pkg>omxplayer</pkg>
+			<pkg>parted</pkg>
+			<pkg>passwd</pkg>
+			<pkg>paxctld</pkg>
+			<pkg>pciutils</pkg>
+			<pkg>perl-base</pkg>
+			<pkg>pi-package</pkg>
+			<pkg>piclone</pkg>
+			<pkg>pigpio</pkg>
+			<pkg>pimodbus-master</pkg>
+			<pkg>pimodbus-slave</pkg>
+			<pkg>pinentry-curses</pkg>
+			<pkg>piserial</pkg>
+			<pkg>pitest</pkg>
+			<pkg>pkg-config</pkg>
+			<pkg>policykit-1</pkg>
+			<pkg>pprompt</pkg>
+			<pkg>procps</pkg>
+			<pkg>psmisc</pkg>
+			<pkg>pypy</pkg>
+			<pkg>python-automationhat</pkg>
+			<pkg>python-blinkt</pkg>
+			<pkg>python-buttonshim</pkg>
+			<pkg>python-can</pkg>
+			<pkg>python-cap1xxx</pkg>
+			<pkg>python-drumhat</pkg>
+			<pkg>python-envirophat</pkg>
+			<pkg>python-explorerhat</pkg>
+			<pkg>python-flask</pkg>
+			<pkg>python-fourletterphat</pkg>
+			<pkg>python-gpiozero</pkg>
+			<pkg>python-microdotphat</pkg>
+			<pkg>python-mote</pkg>
+			<pkg>python-motephat</pkg>
+			<pkg>python-pantilthat</pkg>
+			<pkg>python-phatbeat</pkg>
+			<pkg>python-pianohat</pkg>
+			<pkg>python-picamera</pkg>
+			<pkg>python-piglow</pkg>
+			<pkg>python-pigpio</pkg>
+			<pkg>python-pip</pkg>
+			<pkg>python-pygame</pkg>
+			<pkg>python-rainbowhat</pkg>
+			<pkg>python-rpi.gpio</pkg>
+			<pkg>python-scrollphat</pkg>
+			<pkg>python-scrollphathd</pkg>
+			<pkg>python-serial</pkg>
+			<pkg>python-skywriter</pkg>
+			<pkg>python-smbus</pkg>
+			<pkg>python-sn3218</pkg>
+			<pkg>python-spidev</pkg>
+			<pkg>python-tk</pkg>
+			<pkg>python-touchphat</pkg>
+			<pkg>python-twython</pkg>
+			<pkg>python-unicornhathd</pkg>
+			<pkg>python3-automationhat</pkg>
+			<pkg>python3-blinkt</pkg>
+			<pkg>python3-buttonshim</pkg>
+			<pkg>python3-can</pkg>
+			<pkg>python3-cap1xxx</pkg>
+			<pkg>python3-drumhat</pkg>
+			<pkg>python3-envirophat</pkg>
+			<pkg>python3-explorerhat</pkg>
+			<pkg>python3-flask</pkg>
+			<pkg>python3-fourletterphat</pkg>
+			<pkg>python3-gpiozero</pkg>
+			<pkg>python3-microdotphat</pkg>
+			<pkg>python3-mote</pkg>
+			<pkg>python3-motephat</pkg>
+			<pkg>python3-numpy</pkg>
+			<pkg>python3-pantilthat</pkg>
+			<pkg>python3-phatbeat</pkg>
+			<pkg>python3-pianohat</pkg>
+			<pkg>python3-picamera</pkg>
+			<pkg>python3-piglow</pkg>
+			<pkg>python3-pigpio</pkg>
+			<pkg>python3-pip</pkg>
+			<pkg>python3-pygame</pkg>
+			<pkg>python3-rainbowhat</pkg>
+			<pkg>python3-revpimodio2</pkg>
+			<pkg>python3-rpi.gpio</pkg>
+			<pkg>python3-scrollphat</pkg>
+			<pkg>python3-scrollphathd</pkg>
+			<pkg>python3-serial</pkg>
+			<pkg>python3-skywriter</pkg>
+			<pkg>python3-smbus</pkg>
+			<pkg>python3-sn3218</pkg>
+			<pkg>python3-spidev</pkg>
+			<pkg>python3-tk</pkg>
+			<pkg>python3-touchphat</pkg>
+			<pkg>python3-twython</pkg>
+			<pkg>python3-unicornhathd</pkg>
+			<pkg>python3</pkg>
+			<pkg>python</pkg>
+			<pkg>qpdfview</pkg>
+			<pkg>raspberrypi-bootloader</pkg>
+			<pkg>raspberrypi-kernel</pkg>
+			<pkg>raspbian-archive-keyring</pkg>
+			<pkg>raspi-copies-and-fills</pkg>
+			<pkg>raspi-gpio</pkg>
+			<pkg>raspinfo</pkg>
+			<pkg>readline-common</pkg>
+			<pkg>realvnc-vnc-server</pkg>
+			<pkg>revpi-firmware</pkg>
+			<pkg>revpi-tools</pkg>
+			<pkg>revpi-wallpaper</pkg>
+			<pkg>i2c-tools</pkg>
+			<pkg>revpi-webstatus</pkg>
+			<pkg>revpicommander</pkg>
+			<pkg>revpipycontrol</pkg>
+			<pkg>revpipyload</pkg>
+			<pkg>rfkill</pkg>
+			<pkg>rng-tools</pkg>
+			<pkg>rpi-eeprom</pkg>
+			<pkg>rsync</pkg>
+			<pkg>rsyslog</pkg>
+			<pkg>sed</pkg>
+			<pkg>sensible-utils</pkg>
+			<pkg>ssh-import-id</pkg>
+			<pkg>ssh</pkg>
+			<pkg>strace</pkg>
+			<pkg>sudo</pkg>
+			<pkg>system-config-printer</pkg>
+			<pkg>systemd-sysv</pkg>
+			<pkg>systemd</pkg>
+			<pkg>sysvinit-utils</pkg>
+			<pkg>tar</pkg>
+			<pkg>tasksel-data</pkg>
+			<pkg>tasksel</pkg>
+			<pkg>tcpdump</pkg>
+			<pkg>thonny</pkg>
+			<pkg>traceroute</pkg>
+			<pkg>tree</pkg>
+			<pkg>tzdata</pkg>
+			<pkg>udev</pkg>
+			<pkg>unzip</pkg>
+			<pkg>usb-modeswitch</pkg>
+			<pkg>usbutils</pkg>
+			<pkg>util-linux</pkg>
+			<pkg>v4l-utils</pkg>
+			<pkg>vim-common</pkg>
+			<pkg>vim-tiny</pkg>
+			<pkg>vl805fw</pkg>
+			<pkg>wamerican</pkg>
+			<pkg>wbritish</pkg>
+			<pkg>wireless-tools</pkg>
+			<pkg>wpasupplicant</pkg>
+			<pkg>xcompmgr</pkg>
+			<pkg>xdg-utils</pkg>
+			<pkg>xinit</pkg>
+			<pkg>xserver-xorg-video-fbdev</pkg>
+			<pkg>xserver-xorg</pkg>
+			<pkg>xxd</pkg>
+			<pkg>zenity</pkg>
+			<pkg>zlib1g</pkg>
+			<pkg>revpi-repo</pkg>
+			<pkg>raspberrypi-sys-mods</pkg>
+			<pkg>raspberrypi-ui-mods</pkg>
+			<pkg>pictory</pkg>
 		</pkg-list>
 	</target>
 </ns0:RootFileSystem>
