@@ -556,11 +556,156 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<pkg>npm</pkg>
 		</pkg-list>
 		<finetuning>
+			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
+
+			<!--  avoid installing unnecessary packages on this space-constrained machine-->
+			<file dst="/etc/apt/apt.conf" append="true">
+APT::Install-Recommends "false";
+
+			</file>
+
+			<file dst="/etc/apt/sources.list" append="false">
+deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
+
+			</file>
+
+			<file dst="/etc/apt/sources.list.d/raspi.list" append="false">
+deb http://archive.raspberrypi.org/debian/ buster main
+# Uncomment line below then 'apt-get update' to enable 'apt-get source'
+#deb-src http://archive.raspberrypi.org/debian/ buster main
+			</file>
+			<!-- installation of teamviewer-revpi depends on the package revpi-repo -->
+			<command>apt update; apt install teamviewer-revpi</command>
+
+			<!-- copy piTest source code -->
+			<command>
+				PICONTROLDIR=`mktemp -d -p /tmp piControl.XXXXXXXX`;
+				git clone https://github.com/RevolutionPi/piControl $PICONTROLDIR;
+				cp -pr $PICONTROLDIR/piTest /home/pi/demo;
+				cp -p $PICONTROLDIR/piControl.h /home/pi/demo;
+				sed -i -r -e 's%\.\./%%' /home/pi/demo/Makefile;
+				chown -R pi:pi /home/pi/demo;
+				chmod -R a+rX /home/pi/demo;
+				rm -r $PICONTROLDIR
+			</command>
+
+			<!-- customize settings -->
+			<file dst="/etc/timezone" append="false">
+Europe/Berlin
+
+			</file>
+
+			<rm>/etc/localtime</rm>
+
+			<file dst="/etc/modules" append="true">
+i2c-dev
+piControl
+
+			</file>
+
+			<command>install -d -m 755 -o root -g root /etc/revpi</command>
+
+			<command>install -d -m 700 -o pi -g pi /home/pi/.ssh</command>
+
+			<command>echo "$(date +'%Y-%m-%d')-revpi-buster.img" >/etc/revpi/image-release</command>
+
+			<!-- automatically bring up eth0 and eth1 again after a USB bus reset -->
+			<command>sed -i -e '6i# allow-hotplug eth0\n# allow-hotplug eth1\n' /etc/network/interfaces</command>
+
+			<file dst="/etc/wpa_supplicant/wpa_supplicant.conf" append="false">
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+# WiFi of Revolutionary Pastries, Inc.
+network={
+        ssid=""
+        psk=""
+        key_mgmt=WPA-PSK
+}
+
+			</file>
+
+			<file dst="/etc/dhcpcd.conf" append="true">
+# Prioritize wlan0 routes over eth0 routes.
+interface wlan0
+        metric 100
+
+			</file>
+
+
+
+			<!--  harden network configuration-->
+			<command>
+				sed -r -i -e 's/#net.ipv4.conf.default.rp_filter=1/net.ipv4.conf.default.rp_filter=1/' /etc/sysctl.conf;
+				sed -r -i -e 's/#net.ipv4.conf.all.rp_filter=1/net.ipv4.conf.all.rp_filter=1/' /etc/sysctl.conf;
+				sed -r -i -e 's/#net.ipv4.conf.default.rp_filter=1/net.ipv4.conf.default.rp_filter=1/' /etc/sysctl.conf;
+			</command>
+
+			<!--  display IP address at login prompt-->
+			<command>sed -i -e '1s/$/ \\4 \\6/' /etc/issue</command>
+
+			<!--  configure apache2-->
+			<command>
+				a2enmod ssl;
+				sed -r -i -e 's/^(\tOptions .*Indexes.*)/#\1/' /etc/apache2/apache2.conf
+			</command>
+
+			<!-- install nodejs and nodered with an install script and revpi-nodes from npm repository-->
+			<command>
+				NODEREDSCRIPT="/tmp/update-nodejs-and-nodered.sh";
+				curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered --output $NODEREDSCRIPT;
+				chmod 755 $NODEREDSCRIPT;
+				sudo -u pi $NODEREDSCRIPT --confirm-install --confirm-pi;
+				rm $NODEREDSCRIPT;
+				npm install --prefix /home/pi/.node-red node-red-contrib-revpi-nodes
+			</command>
+
+			<!-- # enable ssh daemon by default, disable swap, disable bluetooth on mini-uart -->
+			<command>
+				systemctl enable ssh;
+				systemctl disable dphys-swapfile;
+				systemctl disable hciuart;
+			</command>
+
+			<!--# disable 3rd party software -->
+			<command>
+				systemctl disable logiclab;
+				systemctl disable nodered;
+				systemctl disable noderedrevpinodes-server;
+				systemctl disable revpipyload;
+			</command>
+
+			<!-- # boot to console by default, disable autologin -->
+			<command>systemctl set-default multi-user.target</command>
+
+			<command>
+				if [ -e /etc/lightdm/lightdm.conf ] ; then
+					sed -r -i -e "s/^autologin-user=/#autologin-user=/" /etc/lightdm/lightdm.conf;
+				fi
+			</command>
+
+			<!-- # peg cpu at 1200 MHz to maximize spi0 throughput and avoid jitter -->
+			<command>revpi-config enable perf-governor</command>
+
+			<ln path="/lib/systemd/system/getty@.service">/etc/systemd/system/getty.target.wants/getty@tty1.service</ln>
+
 			<!-- shrink target image -->
 			<rm>/var/cache/apt/archives/*.deb</rm>
 			<rm>/var/cache/apt/*.bin</rm>
 			<rm>/var/lib/apt/lists/ftp*</rm>
-			<command>apt update; apt install teamviewer-revpi</command>
+
+			<!-- remove package lists, they will be outdated within days-->
+			<rm> /var/lib/apt/lists/*Packages</rm>
+
+			<!-- remove logs and ssh host keys -->
+			<rm> /var/log/* </rm>
+			<rm> /etc/ssh/ssh_host_*_key* </rm>
+
+			<!--  autologin.conf enables autologin in raspios and raspios-full but not in raspios-lite -->
+			<rm> /etc/systemd/system/getty@tty1.service.d/autologin.conf </rm>
+
 		</finetuning>
 	</target>
 </ns0:RootFileSystem>
