@@ -559,6 +559,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<pkg>raspberrypi-sys-mods</pkg>
 			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>pictory</pkg>
+			<pkg>npm</pkg>
 		</pkg-list>
 	</target>
 </ns0:RootFileSystem>
