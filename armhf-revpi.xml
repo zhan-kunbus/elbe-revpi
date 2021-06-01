@@ -657,6 +657,7 @@ interface wlan0
 				NODEREDSCRIPT="/tmp/update-nodejs-and-nodered.sh";
 				curl -sL http://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered --output $NODEREDSCRIPT;
 				chmod 755 $NODEREDSCRIPT;
+				npm config set strict-ssl false;
 				sudo -u pi $NODEREDSCRIPT --confirm-install --confirm-pi;
 				rm $NODEREDSCRIPT;
 				npm install --prefix /home/pi/.node-red node-red-contrib-revpi-nodes
