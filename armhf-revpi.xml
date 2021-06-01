@@ -655,7 +655,7 @@ interface wlan0
 			<!-- install nodejs and nodered with an install script and revpi-nodes from npm repository-->
 			<command>
 				NODEREDSCRIPT="/tmp/update-nodejs-and-nodered.sh";
-				curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered --output $NODEREDSCRIPT;
+				curl -sL http://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered --output $NODEREDSCRIPT;
 				chmod 755 $NODEREDSCRIPT;
 				sudo -u pi $NODEREDSCRIPT --confirm-install --confirm-pi;
 				rm $NODEREDSCRIPT;
