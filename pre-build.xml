@@ -45,7 +45,7 @@
 			<msdoshd>
 				<!-- name of the image file -->
 				<name>pre-build.img</name>
-				<size>5000MiB</size>
+				<size>3500MiB</size>
 					<!-- partition layout -->
 					<partition>
 						<size>50MiB</size>

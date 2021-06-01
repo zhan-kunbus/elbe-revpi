@@ -236,7 +236,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<msdoshd>
 				<!-- name of the image file -->
 				<name>armhf-revpi.img</name>
-				<size>5000MiB</size>
+				<size>3500MiB</size>
 					<!-- partition layout -->
 					<partition>
 						<size>50MiB</size>
