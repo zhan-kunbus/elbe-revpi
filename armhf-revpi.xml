@@ -269,13 +269,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 				</fs>
 			</bylabel>
 		</fstab>
-		<finetuning>
-			<!-- shrink target image -->
-			<rm>/var/cache/apt/archives/*.deb</rm>
-			<rm>/var/cache/apt/*.bin</rm>
-			<rm>/var/lib/apt/lists/ftp*</rm>
-			<command>apt update; apt install teamviewer-revpi</command>
-		</finetuning>
+
 		<pkg-list>
 			<pkg>adduser</pkg>
 			<pkg>alacarte</pkg>
@@ -561,5 +555,12 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<pkg>pictory</pkg>
 			<pkg>npm</pkg>
 		</pkg-list>
+		<finetuning>
+			<!-- shrink target image -->
+			<rm>/var/cache/apt/archives/*.deb</rm>
+			<rm>/var/cache/apt/*.bin</rm>
+			<rm>/var/lib/apt/lists/ftp*</rm>
+			<command>apt update; apt install teamviewer-revpi</command>
+		</finetuning>
 	</target>
 </ns0:RootFileSystem>
