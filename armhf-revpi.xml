@@ -554,6 +554,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>pictory</pkg>
 			<pkg>npm</pkg>
+			<pkg>locales</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
@@ -591,13 +592,29 @@ deb http://archive.raspberrypi.org/debian/ buster main
 				rm -r $PICONTROLDIR
 			</command>
 
-			<!-- customize settings -->
+			<!-- config the default timezone, and apply it -->
 			<file dst="/etc/timezone" append="false">
-Europe/Berlin
-
+				Europe/Berlin
 			</file>
+			<command>
+				dpkg-reconfigure -fnoninteractive tzdata;
+			</command>
 
-			<rm>/etc/localtime</rm>
+			<!-- config the keyboard, and apply it -->
+			<command>
+				sed -i -r -e 's/^(XKBMODEL).*/\1="pc104"/' \
+					-e 's/^(XKBLAYOUT).*/\1="us"/' \
+					-e 's/^(XKBVARIANT).*/\1=""/' \
+					/etc/default/keyboard;
+				dpkg-reconfigure -fnoninteractive keyboard-configuration;
+			</command>
+
+			<!-- config the locale, and apply it -->
+			<command>
+				sed -i -r -e '1aLANG=en_GB.UTF-8' /etc/default/locale;
+				sed -i -r -e 's/^(# en_US.UTF-8 UTF-8)/en_US.UTF-8 UTF-8/' /etc/locale.gen;
+				dpkg-reconfigure -fnoninteractive locales;
+			</command>
 
 			<file dst="/etc/modules" append="true">
 i2c-dev
