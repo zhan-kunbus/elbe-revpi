@@ -580,6 +580,11 @@ deb http://archive.raspberrypi.org/debian/ buster main
 			<!-- installation of teamviewer-revpi depends on the package revpi-repo -->
 			<command>apt update; apt install teamviewer-revpi</command>
 
+			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
+			<command>apt install -y raspberrypi-artwork raspberrypi-net-mods raspi-config rpi-update sense-hat wiringpi xserver-xorg-video-fbturbo </command>
+			<command>apt install -y hunspell-en-gb hyphen-en-gb </command>
+
+
 			<!-- copy piTest source code -->
 			<command>
 				PICONTROLDIR=`mktemp -d -p /tmp piControl.XXXXXXXX`;
