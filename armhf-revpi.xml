@@ -275,6 +275,7 @@ g2QtguBBR9fOTHVgsfBa1G3IGBaovt2EaltEnqAV1Hzmhjf2/i5Zo7XsWm6GEC5X
 		</fstab>
 
 		<pkg-list>
+			<pkg>boot-conf</pkg>
 			<pkg>adduser</pkg>
 			<pkg>alacarte</pkg>
 			<pkg>alsa-utils</pkg>
@@ -923,5 +924,8 @@ user.*                          -/var/log/user.log
 			</file>
 
 		</finetuning>
+		<pbuilder>
+			<git revision="HEAD">https://github.com/zhan-kunbus/boot-conf.git</git>
+		</pbuilder>
 	</target>
 </ns0:RootFileSystem>
