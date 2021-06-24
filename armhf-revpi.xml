@@ -457,12 +457,12 @@
 			<pkg>xxd</pkg>
 			<pkg>zenity</pkg>
 			<pkg>zlib1g</pkg>
-			<pkg>revpi-repo</pkg>
 			<pkg>raspberrypi-sys-mods</pkg>
 			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>pictory</pkg>
 			<pkg>npm</pkg>
 			<pkg>locales</pkg>
+			<pkg>teamviewer-revpi</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
@@ -473,22 +473,9 @@ APT::Install-Recommends "false";
 
 			</file>
 
-			<file dst="/etc/apt/sources.list" append="false">
-deb http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
-# Uncomment line below then 'apt-get update' to enable 'apt-get source'
-#deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi
-
-			</file>
-
-			<file dst="/etc/apt/sources.list.d/raspi.list" append="false">
-deb http://archive.raspberrypi.org/debian/ buster main
-# Uncomment line below then 'apt-get update' to enable 'apt-get source'
-#deb-src http://archive.raspberrypi.org/debian/ buster main
-			</file>
-			<!-- installation of teamviewer-revpi depends on the package revpi-repo -->
-			<command>apt update; apt install teamviewer-revpi</command>
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
+			<command>apt update</command>
 			<command>apt install -y raspberrypi-artwork raspberrypi-net-mods raspi-config rpi-update sense-hat wiringpi xserver-xorg-video-fbturbo </command>
 			<command>apt install -y hunspell-en-gb hyphen-en-gb </command>
 
