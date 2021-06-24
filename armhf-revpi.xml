@@ -462,7 +462,6 @@
 			<pkg>pictory</pkg>
 			<pkg>npm</pkg>
 			<pkg>locales</pkg>
-			<pkg>teamviewer-revpi</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
@@ -476,7 +475,7 @@ APT::Install-Recommends "false";
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
-			<command>apt install -y raspberrypi-artwork raspberrypi-net-mods raspi-config rpi-update sense-hat wiringpi xserver-xorg-video-fbturbo </command>
+			<command>apt install -y raspberrypi-artwork raspberrypi-net-mods raspi-config rpi-update sense-hat wiringpi xserver-xorg-video-fbturbo teamviewer-revpi </command>
 			<command>apt install -y hunspell-en-gb hyphen-en-gb </command>
 
 
