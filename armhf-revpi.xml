@@ -86,22 +86,14 @@
 			<primary_proto>http</primary_proto>
 			<url-list>
 				<url>
-					<binary pin="990" package="teamviewer-revpi">http://repository.teamviewer.com/deb stable tvrevpi</binary>
-					<key>https://raw.githubusercontent.com/zhan-kunbus/files4elbe/master/teamviewer-revpi.gpg.key</key>
-				</url>
-				<url>
-					<binary pin="-1">http://repository.teamviewer.com/deb stable tvrevpi</binary>
-					<key>https://raw.githubusercontent.com/zhan-kunbus/files4elbe/master/teamviewer-revpi.gpg.key</key>
-				</url>
-				<url>
-					<binary>http://archive.raspberrypi.org/debian buster main contrib non-free rpi</binary>
-					<source>http://archive.raspberrypi.org/debian buster main contrib non-free rpi</source>
-					<key>http://archive.raspberrypi.org/debian/raspberrypi.gpg.key</key>
-				</url>
-				<url>
-					<binary>http://raspbian.raspberrypi.org/raspbian buster main contrib non-free rpi</binary>
+					<binary>http://raspbian.raspberrypi.org/raspbian buster contrib non-free rpi</binary>
 					<source>http://raspbian.raspberrypi.org/raspbian buster main contrib non-free rpi</source>
 					<key>http://raspbian.raspberrypi.org/raspbian.public.key</key>
+				</url>
+				<url>
+					<binary>http://archive.raspberrypi.org/debian buster main ui</binary>
+					<source>http://archive.raspberrypi.org/debian buster main ui</source>
+					<key>http://archive.raspberrypi.org/debian/raspberrypi.gpg.key</key>
 				</url>
 				<url>
 					<binary>http://packages.revolutionpi.de/ buster main contrib</binary>
@@ -110,6 +102,10 @@
 				<url>
 					<binary>http://packages.revolutionpi.de/ buster-backports main</binary>
 					<key>https://raw.githubusercontent.com/zhan-kunbus/files4elbe/master/revpi.gpg.key</key>
+				</url>
+				<url>
+					<binary>http://repository.teamviewer.com/deb stable tvrevpi</binary>
+					<key>https://raw.githubusercontent.com/zhan-kunbus/files4elbe/master/teamviewer-revpi.gpg.key</key>
 				</url>
 			</url-list>
 		</mirror>
