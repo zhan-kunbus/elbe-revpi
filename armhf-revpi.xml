@@ -471,9 +471,7 @@ APT::Install-Recommends "false";
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
-			<command>apt install -y raspberrypi-artwork raspberrypi-net-mods raspi-config rpi-update sense-hat wiringpi xserver-xorg-video-fbturbo teamviewer-revpi </command>
-			<command>apt install -y hunspell-en-gb hyphen-en-gb </command>
-
+			<command>apt install -y raspi-config xserver-xorg-video-fbturbo teamviewer-revpi </command>
 
 			<!-- copy piTest source code -->
 			<command>
