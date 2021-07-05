@@ -458,6 +458,7 @@
 			<pkg>pictory</pkg>
 			<pkg>npm</pkg>
 			<pkg>locales</pkg>
+			<pkg>gpiod</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
