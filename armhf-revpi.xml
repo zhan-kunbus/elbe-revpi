@@ -193,8 +193,6 @@
 			<pkg>build-essential</pkg>
 			<pkg>ca-certificates</pkg>
 			<pkg>can-utils</pkg>
-			<pkg>chrome-gnome-shell</pkg>
-			<pkg>chromium-browser</pkg>
 			<pkg>cifs-utils</pkg>
 			<pkg>console-setup</pkg>
 			<pkg>coreutils</pkg>
@@ -219,6 +217,7 @@
 			<pkg>dpkg</pkg>
 			<pkg>e2fsprogs</pkg>
 			<pkg>ed</pkg>
+			<pkg>epiphany-browser</pkg>
 			<pkg>ethtool</pkg>
 			<pkg>fbset</pkg>
 			<pkg>fdisk</pkg>
@@ -239,7 +238,6 @@
 			<pkg>gnome-icon-theme</pkg>
 			<pkg>gnupg-l10n</pkg>
 			<pkg>gnupg-utils</pkg>
-			<pkg>gnupg2</pkg>
 			<pkg>gnupg</pkg>
 			<pkg>gpg-agent</pkg>
 			<pkg>gpg-wks-client</pkg>
@@ -277,6 +275,127 @@
 			<pkg>keyboard-configuration</pkg>
 			<pkg>kmod</pkg>
 			<pkg>less</pkg>
+			<pkg>libacl1</pkg>
+			<pkg>libapparmor1</pkg>
+			<pkg>libapt-inst2.0</pkg>
+			<pkg>libapt-pkg5.0</pkg>
+			<pkg>libargon2-1</pkg>
+			<pkg>libassuan0</pkg>
+			<pkg>libatomic1</pkg>
+			<pkg>libattr1</pkg>
+			<pkg>libaudit-common</pkg>
+			<pkg>libaudit1</pkg>
+			<pkg>libblkid1</pkg>
+			<pkg>libbsd0</pkg>
+			<pkg>libbz2-1.0</pkg>
+			<pkg>libc-bin</pkg>
+			<pkg>libc6</pkg>
+			<pkg>libcap-ng0</pkg>
+			<pkg>libcap2-bin</pkg>
+			<pkg>libcap2</pkg>
+			<pkg>libcom-err2</pkg>
+			<pkg>libcryptsetup12</pkg>
+			<pkg>libdb5.3</pkg>
+			<pkg>libdebconfclient0</pkg>
+			<pkg>libdevmapper1.02.1</pkg>
+			<pkg>libdns-export1104</pkg>
+			<pkg>libelf1</pkg>
+			<pkg>libestr0</pkg>
+			<pkg>libext2fs2</pkg>
+			<pkg>libfastjson4</pkg>
+			<pkg>libfdisk1</pkg>
+			<pkg>libffi6</pkg>
+			<pkg>libgcc1</pkg>
+			<pkg>libgcrypt20</pkg>
+			<pkg>libgdbm6</pkg>
+			<pkg>libgl1-mesa-dri</pkg>
+			<pkg>libgles1</pkg>
+			<pkg>libgles2-mesa</pkg>
+			<pkg>libgmp10</pkg>
+			<pkg>libgnutls30</pkg>
+			<pkg>libgpg-error0</pkg>
+			<pkg>libhogweed4</pkg>
+			<pkg>libident</pkg>
+			<pkg>libidn11</pkg>
+			<pkg>libidn2-0</pkg>
+			<pkg>libip4tc0</pkg>
+			<pkg>libip6tc0</pkg>
+			<pkg>libiptc0</pkg>
+			<pkg>libisc-export1100</pkg>
+			<pkg>libjson-c3</pkg>
+			<pkg>libkmod2</pkg>
+			<pkg>libksba8</pkg>
+			<pkg>libldap-2.4-2</pkg>
+			<pkg>libldap-common</pkg>
+			<pkg>liblocale-gettext-perl</pkg>
+			<pkg>liblognorm5</pkg>
+			<pkg>liblz4-1</pkg>
+			<pkg>liblzma5</pkg>
+			<pkg>libmnl-dev</pkg>
+			<pkg>libmnl0</pkg>
+			<pkg>libmount1</pkg>
+			<pkg>libmtp-runtime</pkg>
+			<pkg>libncurses6</pkg>
+			<pkg>libncursesw6</pkg>
+			<pkg>libnetfilter-conntrack3</pkg>
+			<pkg>libnettle6</pkg>
+			<pkg>libnfnetlink0</pkg>
+			<pkg>libnftnl11</pkg>
+			<pkg>libnpth0</pkg>
+			<pkg>libp11-kit0</pkg>
+			<pkg>libpam-chksshpwd</pkg>
+			<pkg>libpam-modules-bin</pkg>
+			<pkg>libpam-modules</pkg>
+			<pkg>libpam-runtime</pkg>
+			<pkg>libpam0g</pkg>
+			<pkg>libpcre3</pkg>
+			<pkg>libpipeline1</pkg>
+			<pkg>libpopt0</pkg>
+			<pkg>libprocps7</pkg>
+			<pkg>libraspberrypi-bin</pkg>
+			<pkg>libraspberrypi-dev</pkg>
+			<pkg>libraspberrypi-doc</pkg>
+			<pkg>libraspberrypi0</pkg>
+			<pkg>libreadline6</pkg>
+			<pkg>libreadline7</pkg>
+			<pkg>libsasl2-2</pkg>
+			<pkg>libsasl2-modules-db</pkg>
+			<pkg>libseccomp2</pkg>
+			<pkg>libselinux1</pkg>
+			<pkg>libsemanage-common</pkg>
+			<pkg>libsemanage1</pkg>
+			<pkg>libsepol1</pkg>
+			<pkg>libsigc++-1.2-5c2</pkg>
+			<pkg>libsmartcols1</pkg>
+			<pkg>libsocketcan-dev</pkg>
+			<pkg>libsqlite3-0</pkg>
+			<pkg>libss2</pkg>
+			<pkg>libssl1.1</pkg>
+			<pkg>libstdc++6</pkg>
+			<pkg>libsystemd0</pkg>
+			<pkg>libtasn1-6</pkg>
+			<pkg>libtext-charwidth-perl</pkg>
+			<pkg>libtext-iconv-perl</pkg>
+			<pkg>libtext-wrapi18n-perl</pkg>
+			<pkg>libtinfo5</pkg>
+			<pkg>libtinfo6</pkg>
+			<pkg>libuchardet0</pkg>
+			<pkg>libudev0</pkg>
+			<pkg>libudev1</pkg>
+			<pkg>libunistring2</pkg>
+			<pkg>libuuid1</pkg>
+			<pkg>libxtables12</pkg>
+			<pkg>libzstd1</pkg>
+			<pkg>lightdm</pkg>
+			<pkg>locales</pkg>
+			<pkg>logi-rts</pkg>
+			<pkg>login</pkg>
+			<pkg>logrotate</pkg>
+			<pkg>lsb-base</pkg>
+			<pkg>lsof</pkg>
+			<pkg>lua5.1</pkg>
+			<pkg>luajit</pkg>
+			<pkg>lxtask</pkg>
 			<pkg>man-db</pkg>
 			<pkg>manpages-dev</pkg>
 			<pkg>mawk</pkg>
@@ -304,14 +423,17 @@
 			<pkg>paxctld</pkg>
 			<pkg>pciutils</pkg>
 			<pkg>perl-base</pkg>
+			<pkg>pi-bluetooth</pkg>
 			<pkg>pi-package</pkg>
 			<pkg>piclone</pkg>
+			<pkg>pictory</pkg>
 			<pkg>pigpio</pkg>
 			<pkg>pimodbus-master</pkg>
 			<pkg>pimodbus-slave</pkg>
 			<pkg>pinentry-curses</pkg>
 			<pkg>piserial</pkg>
 			<pkg>pitest</pkg>
+			<pkg>piwiz</pkg>
 			<pkg>pkg-config</pkg>
 			<pkg>policykit-1</pkg>
 			<pkg>pprompt</pkg>
@@ -395,22 +517,26 @@
 			<pkg>qpdfview</pkg>
 			<pkg>raspberrypi-bootloader</pkg>
 			<pkg>raspberrypi-kernel</pkg>
+			<pkg>raspberrypi-sys-mods</pkg>
+			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>raspbian-archive-keyring</pkg>
 			<pkg>raspi-copies-and-fills</pkg>
 			<pkg>raspi-gpio</pkg>
 			<pkg>raspinfo</pkg>
+			<pkg>rc-gui</pkg>
 			<pkg>readline-common</pkg>
 			<pkg>realvnc-vnc-server</pkg>
 			<pkg>revpi-firmware</pkg>
+			<pkg>revpi-repo</pkg>
 			<pkg>revpi-tools</pkg>
 			<pkg>revpi-wallpaper</pkg>
-			<pkg>i2c-tools</pkg>
 			<pkg>revpi-webstatus</pkg>
 			<pkg>revpicommander</pkg>
 			<pkg>revpipycontrol</pkg>
 			<pkg>revpipyload</pkg>
 			<pkg>rfkill</pkg>
 			<pkg>rng-tools</pkg>
+			<pkg>rp-prefapps</pkg>
 			<pkg>rpi-eeprom</pkg>
 			<pkg>rsync</pkg>
 			<pkg>rsyslog</pkg>
@@ -446,19 +572,121 @@
 			<pkg>wireless-tools</pkg>
 			<pkg>wpasupplicant</pkg>
 			<pkg>xcompmgr</pkg>
-			<pkg>xdg-utils</pkg>
 			<pkg>xinit</pkg>
 			<pkg>xserver-xorg-video-fbdev</pkg>
 			<pkg>xserver-xorg</pkg>
 			<pkg>xxd</pkg>
 			<pkg>zenity</pkg>
 			<pkg>zlib1g</pkg>
-			<pkg>raspberrypi-sys-mods</pkg>
-			<pkg>raspberrypi-ui-mods</pkg>
-			<pkg>pictory</pkg>
-			<pkg>npm</pkg>
-			<pkg>locales</pkg>
-			<pkg>gpiod</pkg>
+			<!-- on the top packages-->
+			<pkg>agnostics</pkg>
+			<pkg>binutils-arm-linux-gnueabihf</pkg>
+			<pkg>busybox</pkg>
+			<pkg>colord</pkg>
+			<pkg>cups-browsed</pkg>
+			<pkg>cups-pk-helper</pkg>
+			<pkg>dbus-user-session</pkg>
+			<pkg>evince</pkg>
+			<pkg>fakeroot</pkg>
+			<pkg>file</pkg>
+			<pkg>flashrom</pkg>
+			<pkg>fonts-dejavu</pkg>
+			<pkg>fonts-piboto</pkg>
+			<pkg>geoip-database</pkg>
+			<pkg>gir1.2-secret-1</pkg>
+			<pkg>gnome-accessibility-themes</pkg>
+			<pkg>gnome-themes-standard</pkg>
+			<pkg>gpicview</pkg>
+			<pkg>gtk2-engines-clearlookspix</pkg>
+			<pkg>gtk2-engines-pixflat</pkg>
+			<pkg>gui-pkinst</pkg>
+			<pkg>hplip</pkg>
+			<pkg>i2c-tools</pkg>
+			<pkg>ibverbs-providers</pkg>
+			<pkg>javascript-common</pkg>
+			<pkg>libalgorithm-diff-xs-perl</pkg>
+			<pkg>libalgorithm-merge-perl</pkg>
+			<pkg>libc6-dbg</pkg>
+			<pkg>libfile-fcntllock-perl</pkg>
+			<pkg>liblouisutdml-bin</pkg>
+			<pkg>libnss-mdns</pkg>
+			<pkg>libpaper-utils</pkg>
+			<pkg>librtimulib-utils</pkg>
+			<pkg>xdg-utils</pkg>
+			<pkg>lxde-core</pkg>
+			<pkg>lxinput</pkg>
+			<pkg>lxplug-bluetooth</pkg>
+			<pkg>lxplug-cputemp</pkg>
+			<pkg>lxplug-ejecter</pkg>
+			<pkg>lxplug-magnifier</pkg>
+			<pkg>lxplug-network</pkg>
+			<pkg>lxplug-ptbatt</pkg>
+			<pkg>lxplug-volumepulse</pkg>
+			<pkg>lxrandr</pkg>
+			<pkg>lxsession-edit</pkg>
+			<pkg>lxterminal</pkg>
+			<pkg>ncurses-term</pkg>
+			<pkg>openbox-lxde-session</pkg>
+			<pkg>openresolv</pkg>
+			<pkg>pi-greeter</pkg>
+			<pkg>pi-printer-support</pkg>
+			<pkg>pigz</pkg>
+			<pkg>pipanel</pkg>
+			<pkg>pishutdown</pkg>
+			<pkg>pixflat-icons</pkg>
+			<pkg>printer-driver-escpr</pkg>
+			<pkg>printer-driver-gutenprint</pkg>
+			<pkg>printer-driver-postscript-hp</pkg>
+			<pkg>publicsuffix</pkg>
+			<pkg>pulseaudio-module-bluetooth</pkg>
+			<pkg>python-all-dev</pkg>
+			<pkg>python-cffi-backend</pkg>
+			<pkg>python-keyring</pkg>
+			<pkg>python-keyrings.alt</pkg>
+			<pkg>python-olefile</pkg>
+			<pkg>python-openssl</pkg>
+			<pkg>python-pyinotify</pkg>
+			<pkg>python-simplejson</pkg>
+			<pkg>python-wheel</pkg>
+			<pkg>python-xdg</pkg>
+			<pkg>python3-bs4</pkg>
+			<pkg>python3-cffi-backend</pkg>
+			<pkg>python3-dev</pkg>
+			<pkg>python3-html5lib</pkg>
+			<pkg>python3-keyring</pkg>
+			<pkg>python3-keyrings.alt</pkg>
+			<pkg>python3-lxml</pkg>
+			<pkg>python3-olefile</pkg>
+			<pkg>python3-openssl</pkg>
+			<pkg>python3-pygments</pkg>
+			<pkg>python3-pyinotify</pkg>
+			<pkg>python3-renderpm</pkg>
+			<pkg>python3-simplejson</pkg>
+			<pkg>python3-sip</pkg>
+			<pkg>python3-smbc</pkg>
+			<pkg>python3-wheel</pkg>
+			<pkg>python3-xdg</pkg>
+			<pkg>qpdfview-djvu-plugin</pkg>
+			<pkg>qpdfview-ps-plugin</pkg>
+			<pkg>qpdfview-translations</pkg>
+			<pkg>qt5-gtk-platformtheme</pkg>
+			<pkg>qt5-style-plugins</pkg>
+			<pkg>qt5ct</pkg>
+			<pkg>qttranslations5-l10n</pkg>
+			<pkg>read-edid</pkg>
+			<pkg>rp-bookshelf</pkg>
+			<pkg>rpd-plym-splash</pkg>
+			<pkg>rtkit</pkg>
+			<pkg>sane-utils</pkg>
+			<pkg>scrot</pkg>
+			<pkg>system-config-printer-udev</pkg>
+			<pkg>timgm6mb-soundfont</pkg>
+			<pkg>triggerhappy</pkg>
+			<pkg>va-driver-all</pkg>
+			<pkg>vdpau-driver-all</pkg>
+			<pkg>xdg-user-dirs</pkg>
+			<pkg>xsel</pkg>
+			<pkg>yelp</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
@@ -472,7 +700,7 @@ APT::Install-Recommends "false";
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
-			<command>apt install -y raspi-config xserver-xorg-video-fbturbo teamviewer-revpi </command>
+			<command>apt install -y raspi-config xserver-xorg-video-fbturbo teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
 
 			<!-- copy piTest source code -->
 			<command>
@@ -810,6 +1038,7 @@ user.*                          -/var/log/user.log
 		</finetuning>
 		<pbuilder>
 			<git revision="HEAD">https://github.com/zhan-kunbus/boot-conf.git</git>
+			<git revision="HEAD">https://github.com/zhan-kunbus/raspi-config.git</git>
 		</pbuilder>
 	</target>
 </ns0:RootFileSystem>
