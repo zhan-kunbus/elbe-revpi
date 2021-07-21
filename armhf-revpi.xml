@@ -518,6 +518,7 @@
 			<pkg>raspberrypi-bootloader</pkg>
 			<pkg>raspberrypi-kernel</pkg>
 			<pkg>raspberrypi-sys-mods</pkg>
+			<pkg>xserver-xorg-video-fbturbo</pkg>
 			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>raspbian-archive-keyring</pkg>
 			<pkg>raspi-copies-and-fills</pkg>
@@ -700,7 +701,7 @@ APT::Install-Recommends "false";
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
-			<command>apt install -y raspi-config xserver-xorg-video-fbturbo teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
+			<command>apt install -y raspi-config teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
 
 			<!-- copy piTest source code -->
 			<command>
@@ -1039,6 +1040,7 @@ user.*                          -/var/log/user.log
 		<pbuilder>
 			<git revision="HEAD">https://github.com/zhan-kunbus/boot-conf.git</git>
 			<git revision="HEAD">https://github.com/zhan-kunbus/raspi-config.git</git>
+			<git revision="HEAD">https://github.com/zhan-kunbus/xserver-xorg-video-fbturbo.git</git>
 		</pbuilder>
 	</target>
 </ns0:RootFileSystem>
