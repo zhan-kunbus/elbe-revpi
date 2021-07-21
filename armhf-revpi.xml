@@ -701,7 +701,7 @@ APT::Install-Recommends "false";
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
-			<command>apt install -y raspi-config teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
+			<command>apt install -y teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
 
 			<!-- copy piTest source code -->
 			<command>
