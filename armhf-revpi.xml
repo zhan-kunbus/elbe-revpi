@@ -868,15 +868,6 @@ net.ipv4.conf.default.arp_ignore = 1
 			</command>
 
 			<!-- install nodejs and nodered with an install script and revpi-nodes from npm repository-->
-			<command>
-				NODEREDSCRIPT="/tmp/update-nodejs-and-nodered.sh";
-				curl http://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered --output $NODEREDSCRIPT;
-				chmod 755 $NODEREDSCRIPT;
-				npm config set strict-ssl false;
-				sudo -u pi $NODEREDSCRIPT --confirm-install --confirm-pi;
-				rm $NODEREDSCRIPT;
-				npm install --prefix /home/pi/.node-red node-red-contrib-revpi-nodes
-			</command>
 
 			<!-- # enable ssh daemon by default, disable swap, disable bluetooth on mini-uart -->
 			<command>
