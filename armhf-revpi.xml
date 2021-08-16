@@ -175,6 +175,8 @@
 
 		<pkg-list>
 			<pkg>boot-conf</pkg>
+			<pkg>xdg-utils</pkg>
+			<pkg>xserver-xorg-video-fbturbo</pkg>
 			<pkg>adduser</pkg>
 			<pkg>alacarte</pkg>
 			<pkg>alsa-utils</pkg>
@@ -518,8 +520,6 @@
 			<pkg>raspberrypi-bootloader</pkg>
 			<pkg>raspberrypi-kernel</pkg>
 			<pkg>raspberrypi-sys-mods</pkg>
-			<pkg>xserver-xorg-video-fbturbo</pkg>
-			<pkg>raspberrypi-ui-mods</pkg>
 			<pkg>raspbian-archive-keyring</pkg>
 			<pkg>raspi-copies-and-fills</pkg>
 			<pkg>raspi-gpio</pkg>
@@ -528,7 +528,6 @@
 			<pkg>readline-common</pkg>
 			<pkg>realvnc-vnc-server</pkg>
 			<pkg>revpi-firmware</pkg>
-			<pkg>revpi-repo</pkg>
 			<pkg>revpi-tools</pkg>
 			<pkg>revpi-wallpaper</pkg>
 			<pkg>revpi-webstatus</pkg>
@@ -613,7 +612,6 @@
 			<pkg>libnss-mdns</pkg>
 			<pkg>libpaper-utils</pkg>
 			<pkg>librtimulib-utils</pkg>
-			<pkg>xdg-utils</pkg>
 			<pkg>lxde-core</pkg>
 			<pkg>lxinput</pkg>
 			<pkg>lxplug-bluetooth</pkg>
@@ -688,6 +686,7 @@
 			<pkg>xdg-user-dirs</pkg>
 			<pkg>xsel</pkg>
 			<pkg>yelp</pkg>
+			<pkg>raspberrypi-ui-mods</pkg>
 		</pkg-list>
 		<finetuning>
 			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
@@ -1026,6 +1025,9 @@ user.*                          -/var/log/user.log
 *.emerg                         :omusrmsg:*
 
 			</file>
+			<command>
+		sed -i '/^echo "Be sure to write down the password if you have lost the sticker"/i echo "updating mime database..."\nupdate-mime-database /usr/share/mime\n' /usr/sbin/revpi-factory-reset
+			</command>
 
 		</finetuning>
 		<pbuilder>
