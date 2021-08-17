@@ -308,4 +308,5 @@ uncompresscmd /usr/bin/unxz' /etc/logrotate.conf;
 			<git revision="HEAD">https://github.com/zhan-kunbus/xserver-xorg-video-fbturbo.git</git>
 		</pbuilder>
 	</target>
+	<archivedir>armhf-revpi-archive/</archivedir>
 </ns0:RootFileSystem>
