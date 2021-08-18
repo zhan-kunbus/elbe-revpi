@@ -1,79 +1,42 @@
 			<pkg>boot-conf</pkg>
 			<pkg>xdg-utils</pkg>
 			<pkg>xserver-xorg-video-fbturbo</pkg>
-			<pkg>adduser</pkg>
 			<pkg>alacarte</pkg>
 			<pkg>alsa-utils</pkg>
 			<pkg>apt-listchanges</pkg>
 			<pkg>apt-transport-https</pkg>
-			<pkg>apt-utils</pkg>
-			<pkg>apt</pkg>
 			<pkg>arandr</pkg>
 			<pkg>avahi-daemon</pkg>
-			<pkg>base-files</pkg>
-			<pkg>base-passwd</pkg>
 			<pkg>bash-completion</pkg>
-			<pkg>bash</pkg>
-			<pkg>bsdmainutils</pkg>
-			<pkg>bsdutils</pkg>
 			<pkg>build-essential</pkg>
 			<pkg>ca-certificates</pkg>
 			<pkg>can-utils</pkg>
 			<pkg>cifs-utils</pkg>
 			<pkg>console-setup</pkg>
-			<pkg>coreutils</pkg>
-			<pkg>cpio</pkg>
 			<pkg>cpufrequtils</pkg>
 			<pkg>crda</pkg>
-			<pkg>cron</pkg>
 			<pkg>cups</pkg>
 			<pkg>curl</pkg>
-			<pkg>dash</pkg>
-			<pkg>debconf-i18n</pkg>
 			<pkg>debconf-utils</pkg>
-			<pkg>debconf</pkg>
-			<pkg>debianutils</pkg>
 			<pkg>dhcpcd5</pkg>
-			<pkg>diffutils</pkg>
-			<pkg>dirmngr</pkg>
-			<pkg>dmidecode</pkg>
-			<pkg>dmsetup</pkg>
 			<pkg>dosfstools</pkg>
 			<pkg>dphys-swapfile</pkg>
-			<pkg>dpkg</pkg>
-			<pkg>e2fsprogs</pkg>
 			<pkg>ed</pkg>
 			<pkg>epiphany-browser</pkg>
 			<pkg>ethtool</pkg>
 			<pkg>fbset</pkg>
-			<pkg>fdisk</pkg>
 			<pkg>ffmpeg</pkg>
-			<pkg>findutils</pkg>
 			<pkg>firmware-atheros</pkg>
 			<pkg>firmware-brcm80211</pkg>
 			<pkg>firmware-libertas</pkg>
 			<pkg>firmware-misc-nonfree</pkg>
 			<pkg>firmware-realtek</pkg>
-			<pkg>gcc-8-base</pkg>
 			<pkg>gdb</pkg>
-			<pkg>gdbm-l10n</pkg>
 			<pkg>gdbserver</pkg>
 			<pkg>geany</pkg>
 			<pkg>git</pkg>
 			<pkg>gldriver-test</pkg>
 			<pkg>gnome-icon-theme</pkg>
-			<pkg>gnupg-l10n</pkg>
-			<pkg>gnupg-utils</pkg>
-			<pkg>gnupg</pkg>
-			<pkg>gpg-agent</pkg>
-			<pkg>gpg-wks-client</pkg>
-			<pkg>gpg-wks-server</pkg>
-			<pkg>gpg</pkg>
-			<pkg>gpgconf</pkg>
-			<pkg>gpgsm</pkg>
-			<pkg>gpgv</pkg>
-			<pkg>grep</pkg>
-			<pkg>groff-base</pkg>
 			<pkg>gstreamer1.0-alsa</pkg>
 			<pkg>gstreamer1.0-libav</pkg>
 			<pkg>gstreamer1.0-omx</pkg>
@@ -84,159 +47,30 @@
 			<pkg>gvfs-backends</pkg>
 			<pkg>gvfs-fuse</pkg>
 			<pkg>gvfs</pkg>
-			<pkg>gzip</pkg>
 			<pkg>hardlink</pkg>
-			<pkg>hostname</pkg>
 			<pkg>htop</pkg>
-			<pkg>ifupdown</pkg>
-			<pkg>info</pkg>
-			<pkg>init-system-helpers</pkg>
-			<pkg>init</pkg>
-			<pkg>install-info</pkg>
-			<pkg>iproute2</pkg>
-			<pkg>iptables</pkg>
-			<pkg>iputils-ping</pkg>
-			<pkg>isc-dhcp-client</pkg>
-			<pkg>isc-dhcp-common</pkg>
 			<pkg>keyboard-configuration</pkg>
-			<pkg>kmod</pkg>
-			<pkg>less</pkg>
-			<pkg>libacl1</pkg>
-			<pkg>libapparmor1</pkg>
-			<pkg>libapt-inst2.0</pkg>
-			<pkg>libapt-pkg5.0</pkg>
-			<pkg>libargon2-1</pkg>
-			<pkg>libassuan0</pkg>
-			<pkg>libatomic1</pkg>
-			<pkg>libattr1</pkg>
-			<pkg>libaudit-common</pkg>
-			<pkg>libaudit1</pkg>
-			<pkg>libblkid1</pkg>
-			<pkg>libbsd0</pkg>
-			<pkg>libbz2-1.0</pkg>
-			<pkg>libc-bin</pkg>
-			<pkg>libc6</pkg>
-			<pkg>libcap-ng0</pkg>
-			<pkg>libcap2-bin</pkg>
-			<pkg>libcap2</pkg>
-			<pkg>libcom-err2</pkg>
-			<pkg>libcryptsetup12</pkg>
-			<pkg>libdb5.3</pkg>
-			<pkg>libdebconfclient0</pkg>
-			<pkg>libdevmapper1.02.1</pkg>
-			<pkg>libdns-export1104</pkg>
-			<pkg>libelf1</pkg>
-			<pkg>libestr0</pkg>
-			<pkg>libext2fs2</pkg>
-			<pkg>libfastjson4</pkg>
-			<pkg>libfdisk1</pkg>
-			<pkg>libffi6</pkg>
-			<pkg>libgcc1</pkg>
-			<pkg>libgcrypt20</pkg>
-			<pkg>libgdbm6</pkg>
 			<pkg>libgl1-mesa-dri</pkg>
 			<pkg>libgles1</pkg>
 			<pkg>libgles2-mesa</pkg>
-			<pkg>libgmp10</pkg>
-			<pkg>libgnutls30</pkg>
-			<pkg>libgpg-error0</pkg>
-			<pkg>libhogweed4</pkg>
-			<pkg>libident</pkg>
-			<pkg>libidn11</pkg>
-			<pkg>libidn2-0</pkg>
-			<pkg>libip4tc0</pkg>
-			<pkg>libip6tc0</pkg>
-			<pkg>libiptc0</pkg>
-			<pkg>libisc-export1100</pkg>
-			<pkg>libjson-c3</pkg>
-			<pkg>libkmod2</pkg>
-			<pkg>libksba8</pkg>
-			<pkg>libldap-2.4-2</pkg>
-			<pkg>libldap-common</pkg>
-			<pkg>liblocale-gettext-perl</pkg>
-			<pkg>liblognorm5</pkg>
-			<pkg>liblz4-1</pkg>
-			<pkg>liblzma5</pkg>
-			<pkg>libmnl-dev</pkg>
-			<pkg>libmnl0</pkg>
-			<pkg>libmount1</pkg>
 			<pkg>libmtp-runtime</pkg>
-			<pkg>libncurses6</pkg>
-			<pkg>libncursesw6</pkg>
-			<pkg>libnetfilter-conntrack3</pkg>
-			<pkg>libnettle6</pkg>
-			<pkg>libnfnetlink0</pkg>
-			<pkg>libnftnl11</pkg>
-			<pkg>libnpth0</pkg>
-			<pkg>libp11-kit0</pkg>
 			<pkg>libpam-chksshpwd</pkg>
-			<pkg>libpam-modules-bin</pkg>
-			<pkg>libpam-modules</pkg>
-			<pkg>libpam-runtime</pkg>
-			<pkg>libpam0g</pkg>
-			<pkg>libpcre3</pkg>
-			<pkg>libpipeline1</pkg>
-			<pkg>libpopt0</pkg>
-			<pkg>libprocps7</pkg>
 			<pkg>libraspberrypi-bin</pkg>
 			<pkg>libraspberrypi-dev</pkg>
 			<pkg>libraspberrypi-doc</pkg>
 			<pkg>libraspberrypi0</pkg>
-			<pkg>libreadline6</pkg>
-			<pkg>libreadline7</pkg>
-			<pkg>libsasl2-2</pkg>
-			<pkg>libsasl2-modules-db</pkg>
-			<pkg>libseccomp2</pkg>
-			<pkg>libselinux1</pkg>
-			<pkg>libsemanage-common</pkg>
-			<pkg>libsemanage1</pkg>
-			<pkg>libsepol1</pkg>
-			<pkg>libsigc++-1.2-5c2</pkg>
-			<pkg>libsmartcols1</pkg>
 			<pkg>libsocketcan-dev</pkg>
-			<pkg>libsqlite3-0</pkg>
-			<pkg>libss2</pkg>
-			<pkg>libssl1.1</pkg>
-			<pkg>libstdc++6</pkg>
-			<pkg>libsystemd0</pkg>
-			<pkg>libtasn1-6</pkg>
-			<pkg>libtext-charwidth-perl</pkg>
-			<pkg>libtext-iconv-perl</pkg>
-			<pkg>libtext-wrapi18n-perl</pkg>
-			<pkg>libtinfo5</pkg>
-			<pkg>libtinfo6</pkg>
-			<pkg>libuchardet0</pkg>
-			<pkg>libudev0</pkg>
-			<pkg>libudev1</pkg>
-			<pkg>libunistring2</pkg>
-			<pkg>libuuid1</pkg>
-			<pkg>libxtables12</pkg>
-			<pkg>libzstd1</pkg>
 			<pkg>lightdm</pkg>
 			<pkg>locales</pkg>
 			<pkg>logi-rts</pkg>
-			<pkg>login</pkg>
-			<pkg>logrotate</pkg>
-			<pkg>lsb-base</pkg>
 			<pkg>lsof</pkg>
 			<pkg>lua5.1</pkg>
 			<pkg>luajit</pkg>
 			<pkg>lxtask</pkg>
-			<pkg>man-db</pkg>
 			<pkg>manpages-dev</pkg>
-			<pkg>mawk</pkg>
 			<pkg>menu-xdg</pkg>
-			<pkg>mount</pkg>
 			<pkg>mousepad</pkg>
-			<pkg>multiarch-support</pkg>
-			<pkg>nano</pkg>
 			<pkg>ncdu</pkg>
-			<pkg>ncurses-base</pkg>
-			<pkg>ncurses-bin</pkg>
-			<pkg>net-tools</pkg>
-			<pkg>netbase</pkg>
-			<pkg>netcat-openbsd</pkg>
-			<pkg>netcat-traditional</pkg>
 			<pkg>newpid</pkg>
 			<pkg>nfs-common</pkg>
 			<pkg>nodejs</pkg>
@@ -245,10 +79,7 @@
 			<pkg>obconf</pkg>
 			<pkg>omxplayer</pkg>
 			<pkg>parted</pkg>
-			<pkg>passwd</pkg>
-			<pkg>paxctld</pkg>
 			<pkg>pciutils</pkg>
-			<pkg>perl-base</pkg>
 			<pkg>pi-bluetooth</pkg>
 			<pkg>pi-package</pkg>
 			<pkg>piclone</pkg>
@@ -256,14 +87,12 @@
 			<pkg>pigpio</pkg>
 			<pkg>pimodbus-master</pkg>
 			<pkg>pimodbus-slave</pkg>
-			<pkg>pinentry-curses</pkg>
 			<pkg>piserial</pkg>
 			<pkg>pitest</pkg>
 			<pkg>piwiz</pkg>
 			<pkg>pkg-config</pkg>
 			<pkg>policykit-1</pkg>
 			<pkg>pprompt</pkg>
-			<pkg>procps</pkg>
 			<pkg>psmisc</pkg>
 			<pkg>pypy</pkg>
 			<pkg>python-automationhat</pkg>
@@ -344,12 +173,10 @@
 			<pkg>raspberrypi-bootloader</pkg>
 			<pkg>raspberrypi-kernel</pkg>
 			<pkg>raspberrypi-sys-mods</pkg>
-			<pkg>raspbian-archive-keyring</pkg>
 			<pkg>raspi-copies-and-fills</pkg>
 			<pkg>raspi-gpio</pkg>
 			<pkg>raspinfo</pkg>
 			<pkg>rc-gui</pkg>
-			<pkg>readline-common</pkg>
 			<pkg>realvnc-vnc-server</pkg>
 			<pkg>revpi-firmware</pkg>
 			<pkg>revpi-tools</pkg>
@@ -363,33 +190,19 @@
 			<pkg>rp-prefapps</pkg>
 			<pkg>rpi-eeprom</pkg>
 			<pkg>rsync</pkg>
-			<pkg>rsyslog</pkg>
-			<pkg>sed</pkg>
-			<pkg>sensible-utils</pkg>
 			<pkg>ssh-import-id</pkg>
 			<pkg>ssh</pkg>
 			<pkg>strace</pkg>
 			<pkg>sudo</pkg>
 			<pkg>system-config-printer</pkg>
-			<pkg>systemd-sysv</pkg>
-			<pkg>systemd</pkg>
-			<pkg>sysvinit-utils</pkg>
-			<pkg>tar</pkg>
-			<pkg>tasksel-data</pkg>
-			<pkg>tasksel</pkg>
 			<pkg>tcpdump</pkg>
 			<pkg>thonny</pkg>
-			<pkg>traceroute</pkg>
 			<pkg>tree</pkg>
 			<pkg>tzdata</pkg>
-			<pkg>udev</pkg>
 			<pkg>unzip</pkg>
 			<pkg>usb-modeswitch</pkg>
 			<pkg>usbutils</pkg>
-			<pkg>util-linux</pkg>
 			<pkg>v4l-utils</pkg>
-			<pkg>vim-common</pkg>
-			<pkg>vim-tiny</pkg>
 			<pkg>vl805fw</pkg>
 			<pkg>wamerican</pkg>
 			<pkg>wbritish</pkg>
@@ -399,9 +212,7 @@
 			<pkg>xinit</pkg>
 			<pkg>xserver-xorg-video-fbdev</pkg>
 			<pkg>xserver-xorg</pkg>
-			<pkg>xxd</pkg>
 			<pkg>zenity</pkg>
-			<pkg>zlib1g</pkg>
 			<!-- on the top packages-->
 			<pkg>agnostics</pkg>
 			<pkg>binutils-arm-linux-gnueabihf</pkg>
