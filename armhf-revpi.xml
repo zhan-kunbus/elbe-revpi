@@ -184,6 +184,7 @@
 
 			<!-- The following packages can be removed when comatition with image from imagebakery is not needed.-->
 			<command>apt install -y wiringpi sense-hat rpi-update raspberrypi-artwork raspberrypi-net-mods</command>
+			<command>apt purge -y gcc-7-base gcc-6-base gcc-5-base gcc-4.9-base libboost-iostreams1.58.0 libegl1-mesa</command>
 
 			<!-- copy piTest source code -->
 			<command>
