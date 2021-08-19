@@ -73,7 +73,6 @@
 			<pkg>ncdu</pkg>
 			<pkg>newpid</pkg>
 			<pkg>nfs-common</pkg>
-			<pkg>nodejs</pkg>
 			<pkg>noderedrevpinodes-server</pkg>
 			<pkg>ntfs-3g</pkg>
 			<pkg>obconf</pkg>
