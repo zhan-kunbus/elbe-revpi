@@ -300,11 +300,6 @@ compressext .xz\
 uncompresscmd /usr/bin/unxz' /etc/logrotate.conf;
 
 			</command>
-
-			<command>
-		sed -i '/^echo "Be sure to write down the password if you have lost the sticker"/i echo "updating mime database..."\nupdate-mime-database /usr/share/mime\n' /usr/sbin/revpi-factory-reset
-			</command>
-
 		</finetuning>
 		<pbuilder>
 			<git revision="HEAD">https://github.com/zhan-kunbus/boot-conf.git</git>
