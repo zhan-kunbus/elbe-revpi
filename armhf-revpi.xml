@@ -300,6 +300,7 @@ compressext .xz\
 uncompresscmd /usr/bin/unxz' /etc/logrotate.conf;
 
 			</command>
+			<ln path="/dev/null">/etc/systemd/network/99-default.link</ln>
 		</finetuning>
 		<pbuilder>
 			<git revision="HEAD">https://github.com/zhan-kunbus/boot-conf.git</git>
