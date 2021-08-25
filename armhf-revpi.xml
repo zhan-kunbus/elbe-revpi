@@ -182,6 +182,9 @@
 			<command>apt update</command>
 			<command>apt install -y teamviewer-revpi hunspell-en-gb hyphen-en-gb</command>
 
+			<!-- The following packages can be removed when comatition with image from imagebakery is not needed.-->
+			<command>apt install -y wiringpi sense-hat rpi-update raspberrypi-artwork raspberrypi-net-mods</command>
+
 			<!-- copy piTest source code -->
 			<command>
 				PICONTROLDIR=`mktemp -d -p /tmp piControl.XXXXXXXX`;
