@@ -53,7 +53,6 @@
 			<pkg>openssh-server</pkg>
 			<pkg>debootstrap</pkg>
 			<pkg>pbuilder</pkg>
-			<pkg>ubuntu-keyring</pkg>
 		</pkg-list>
 		<finetuning>
 			<command>
