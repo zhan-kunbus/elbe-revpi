@@ -140,7 +140,7 @@
 			<msdoshd>
 				<!-- name of the image file -->
 				<name>armhf-revpi.img</name>
-				<size>3500MiB</size>
+				<size>3700MiB</size>
 					<!-- partition layout -->
 					<partition>
 						<size>50MiB</size>
