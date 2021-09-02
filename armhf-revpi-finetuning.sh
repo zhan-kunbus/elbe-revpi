@@ -6,3 +6,7 @@ P="\/usr\/local\/sbin:\/usr\/local\/bin:\/usr\/sbin:\/usr\/bin:\/sbin:\
 sed -r -i "s/(ENV_PATH.*PATH=).*/\1"$P"/g" /etc/login.defs;
 P=\""$P"\";
 sed -r -i "7c\ \ PATH="$P"" /etc/profile;
+
+# Remove the duplicated entry in /etc/hosts, which was added by ELBE before
+# the finetuning of the image
+sed -i "/127.0.0.1 localhost/d" /etc/hosts;
