@@ -10,3 +10,9 @@ sed -r -i "7c\ \ PATH="$P"" /etc/profile;
 # Remove the duplicated entry in /etc/hosts, which was added by ELBE before
 # the finetuning of the image
 sed -i "/127.0.0.1 localhost/d" /etc/hosts;
+
+# “quiet splash plymouth.ignore-serial-consoles“ was added by rpd-plym-splash
+# in postint, but in the imagebakery-image, "splash" and "quiet" are not contained.
+# To be compatible with it, they should be removed.
+sed -i -e "s/ splash//g" /boot/cmdline.txt;
+sed -i -e "s/ quiet//g" /boot/cmdline.txt;
