@@ -201,6 +201,11 @@
 			</command>
 
 			<command>
+				# configure the time zone as "Europe/Berlin"
+				sed -i "1c\Europe/Berlin" /etc/timezone;
+				# remove the symbolic link to make the timezone on duty
+				# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=813226#10
+				rm /etc/localtime;
 				dpkg-reconfigure -fnoninteractive tzdata;
 			</command>
 
