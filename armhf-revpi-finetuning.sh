@@ -16,3 +16,7 @@ sed -i "/127.0.0.1 localhost/d" /etc/hosts;
 # To be compatible with it, they should be removed.
 sed -i -e "s/ splash//g" /boot/cmdline.txt;
 sed -i -e "s/ quiet//g" /boot/cmdline.txt;
+
+# force HDMI mode even if no HDMI monitor is detected
+sed -r -i -e 's/#hdmi_force_hotplug=1/hdmi_force_hotplug=1/' \
+          -e 's/#hdmi_drive=2/hdmi_drive=2/' /boot/config.txt
