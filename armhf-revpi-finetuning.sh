@@ -20,3 +20,9 @@ sed -i -e "s/ quiet//g" /boot/cmdline.txt;
 # force HDMI mode even if no HDMI monitor is detected
 sed -r -i -e 's/#hdmi_force_hotplug=1/hdmi_force_hotplug=1/' \
           -e 's/#hdmi_drive=2/hdmi_drive=2/' /boot/config.txt
+
+# Disable wifi on 5GHz models
+# https://github.com/RPi-Distro/pi-gen/blob/dcfd74d7d1fa293065ac6d565711e9ff891fe2b8/stage2/02-net-tweaks/01-run.sh#L28
+mkdir -p "/var/lib/systemd/rfkill/"
+echo 1 > "/var/lib/systemd/rfkill/platform-3f300000.mmcnr:wlan"
+echo 1 > "/var/lib/systemd/rfkill/platform-fe300000.mmcnr:wlan"
