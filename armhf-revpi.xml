@@ -178,7 +178,7 @@
 		<finetuning>
 			<!-- set SKEL to /etc/skel to make the bash configuration files be copied to home of new users -->
 			<command>sed -i "s/# SKEL=\/etc\/skel/SKEL=\/etc\/skel/g" /etc/default/useradd</command>
-			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberrypi" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
+			<adduser shell="/bin/bash" home="/home/pi" create_group = "true" passwd="raspberry" groups="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,i2c">pi</adduser>
 
 			<!-- install packages which are failed at pkg-list inst stage because of licences problem -->
 			<command>apt update</command>
