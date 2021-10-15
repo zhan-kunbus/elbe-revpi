@@ -1,0 +1,2 @@
+<conf owner="pbuilder" key="pbuilder/mirrorsite" type="string" value="http://ftp.de.debian.org/debian"/>
+<conf owner="locales" key="locales/default_environment_locale" type="string" value="en_US.UTF-8"/>
