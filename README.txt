@@ -1,9 +1,7 @@
-armhf-raspios.xsl:
-	Define how the XML will be generaged.
-build-image.xml:
-	Define the general parameters, e.g. name or version of the project, name of the image, etc.
+armhf-raspios.xml:
+	The main XML file for ELBE.
 
-stageX/pkg-list:
+stageX/pkg-list.xml:
 	Give the packages to install in this stage.
 stageX/preseed.xml:
 	Specify the debconf selections for the packages in this stage.
@@ -17,7 +15,7 @@ stageX/archive/:
 	The files for <archivedir> of this stage.
 
 To generate the XML file for ELBE:
-xsltproc -o output.xml armhf-raspios.xsl build-image.xml
+elbe preprocess armhf-raspios.xml -o output.xml
 
-To print the XML file with well formatted:
-xsltproc armhf-raspios.xsl build-image.xml | xmllint --format -
+To submit the XML file to ELBE;
+elbe initvm submit --skip-download --skip-build-bin --skip-build-sources --keep-files ./output.xml
